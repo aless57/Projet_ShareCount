@@ -6,11 +6,12 @@
 
 int main(int argc, char *argv[])
 {
+    Utilisateur u("DEMANGE","Alessi","demangealessi@gmail.com","0666442119","alessi");
+    printf("%s\n",u.getNom().toStdString().c_str());
+
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
 
     return a.exec();
-   // Utilisateur u("nom","prenom","mail","num","mdp");
-    //printf("%s\n",u.getNom().toStdString().c_str());
 }
