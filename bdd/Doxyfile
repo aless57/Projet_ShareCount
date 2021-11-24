@@ -1,0 +1,40 @@
+# Doxyfile 1.8.11 -*- Makefile -*- (to get Makefile-mode in emacs)
+
+# Minimal Doxygen settings file, written A. Scheuer
+# (http://members.loria.fr/AScheuer).
+
+
+# Project related configuration options ------------------------------
+
+PROJECT_NAME           = "Qt SQL Relational Table Example"
+
+# Build related configuration options --------------------------------
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+
+# Configuration options related to the input files -------------------
+
+FILE_PATTERNS          = *.cpp *.hpp 
+EXCLUDE                = moc_*.cpp
+EXAMPLE_PATH           = .
+
+# Configuration options related to source browsing -------------------
+
+SOURCE_BROWSER         = YES
+
+# Configuration options related to the LaTeX output ------------------
+
+GENERATE_LATEX         = NO
+
+# Configuration options related to the preprocessor ------------------
+
+INCLUDE_PATH           = . $(QT_INC)/QtCore $(QT_INC)/QtGui \
+                           $(QT_INC)/QtWidgets $(QT_INC)/QtSQL
+
+# Configuration options related to external references ---------------
+
+TAGFILES               = $(QT_DOC)/qtcore/qtcore.tags=$(QT_W3)  \
+			 $(QT_DOC)/qtsql/qtsql.tags=$(QT_W3)    \
+			 $(QT_DOC)/qtgui/qtgui.tags=$(QT_W3)    \
+			 $(QT_DOC)/qtwidgets/qtwidgets.tags=$(QT_W3)

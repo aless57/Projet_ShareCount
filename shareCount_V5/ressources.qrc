@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>connexion.png</file>
+        <file>logoShareCount.png</file>
+    </qresource>
+</RCC>
