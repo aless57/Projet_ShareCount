@@ -1,0 +1,10 @@
+debug/mainwindow.o
+debug/main.o
+debug/Sharecount.o
+debug/Utilisateur.o
+debug/Gestionnairedialogue.o
+debug/Basededonnees.o
+debug/widget.o
+debug/qrc_ressources.o
+debug/moc_mainwindow.o
+debug/moc_widget.o

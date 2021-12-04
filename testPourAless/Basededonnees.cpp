@@ -1,0 +1,65 @@
+#include "Basededonnees.h"
+/**
+ * @brief Constructeur de la classe BaseDeDonnees
+*/
+BaseDeDonnees::BaseDeDonnees()
+{}
+
+/**
+ * @brief BaseDeDonnees::creerBDD la fonction qui crée la base de données associée à l'application si elle n'existe pas déjà et la table Utilisateur
+ * @return le code d'erreur
+ * 0 si tout est okay
+ * 1 si la table n'a pas pu être crée
+ * 2 si la bdd a rencontrée un problème lors de l'ouverture
+ */
+int BaseDeDonnees::creerBDD(){
+    int r=0;
+    ///cré la base de données dans le répertoire
+    QSqlDatabase bdd=QSqlDatabase::addDatabase("QSQLITE");
+    bdd.setDatabaseName("../bdd.db");
+    if(bdd.open()){ ///ouvre la base de données
+        std::cout <<"Le fichier de la bdd est ouvert" << std::endl;
+        QSqlQuery query(bdd);
+        ///crée la table utilisateur si elle n'existe pas déjà
+        if(query.exec("CREATE TABLE IF NOT EXISTS Utilisateur(mail VARCHAR(50) NOT NULL,nom VARCHAR(50) NOT NULL,prenom VARCHAR(50) NOT NULL,motDePasse VARCHAR(50) NOT NULL,numeroTelephone VARCHAR(50) NOT NULL,iban VARCHAR(100),PRIMARY KEY(mail));"
+                      )){
+            std::cout << "Table Utilisateur crée " << std::endl;
+        }else{  ///la reqête de création de table à échouée
+            r=1;
+        }
+    }else{
+        r=2;    ///l'ouverture de la base de données à échouée
+    }
+    return r;   ///le code d'erreur
+}
+
+/**
+ * @brief ajouterDonnees la fonction qui ajoute les donnees rentrées par l'utilisateur dans la base de données
+ * @param u l'utilisateur
+ */
+void BaseDeDonnees::ajouterDonnees(Utilisateur u){
+    QSqlQuery query;
+    ///la requete sql pour ajouter un utilisateur dans la table Utilisateur
+    QString requete="INSERT INTO UTILISATEUR (mail,nom,prenom,motDePasse,numeroTelephone) VALUES ('"+u.getMail()+"','"+u.getNom()+"','"+u.getPrenom()+"','"+u.getMotDePasse()+"','"+u.getNumeroTelephone()+"');";
+    ///execution de la requête
+    if(query.exec(requete)){
+        std::cout << "utilisateur bien ajouté" << std::endl;
+    }else{ ///l'execution de la requête à échouée
+        std::cout << "erreur dans l'ajout de l'utilisateur" << std::endl;
+    }
+}
+/**
+* @brief ajoute les coordonnées bancaires rentrées par l'utilisateur u
+* @param u l'utilisateur qui rentre ses coordonnées
+*/
+void BaseDeDonnees::ajouterCoordonneesBancaires(Utilisateur u){
+    QSqlQuery query;
+    ///la requête sql pour ajouter les coordonnées bancaires de l'utilisateur u
+    QString requete="UPDATE Utilisateur SET iban='"+u.getIBAN()+"' WHERE mail LIKE '"+u.getMail()+"';";
+    ///execution de la requête
+    if(query.exec(requete)){
+        std::cout << "coordonnées bancaires bien ajoutées" << std::endl;
+    }else{ ///l'execution de la requête à échouée
+        std::cout << "erreur dans l'ajout des coordonnées bancaires" << std::endl;
+    }
+}

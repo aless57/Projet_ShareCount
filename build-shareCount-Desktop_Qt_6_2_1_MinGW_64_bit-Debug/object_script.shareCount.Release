@@ -1,0 +1,10 @@
+release/mainwindow.o
+release/main.o
+release/Sharecount.o
+release/Utilisateur.o
+release/Gestionnairedialogue.o
+release/Basededonnees.o
+release/widget.o
+release/qrc_ressources.o
+release/moc_mainwindow.o
+release/moc_widget.o
