@@ -1,4 +1,3 @@
-#include "mainwindow.h"
 #include "Utilisateur.h"
 #include "Sharecount.h"
 #include <stdio.h>
@@ -10,6 +9,7 @@
 #include <QIcon>
 #include <QLabel>
 #include "Basededonnees.h"
+#include "fenetreprincipale.h"
 
 using namespace std;
 
@@ -29,23 +29,29 @@ int main(int argc, char *argv[])
 
 
     ShareCount sc(bdd);
-    Utilisateur u("n","p","m","num","mdp");
-    Utilisateur u1("n1","p1","m1","num1","mdp1");
-   // u.ajouterIBAN("123");
-    //sc.ajouterUtilisateur(u);
-    //sc.ajouterUtilisateur(u1);
-    //bdd.ajouterCoordonneesBancaires(u);
+    Utilisateur u("n","p","m","num","mdp", bdd);
+    Utilisateur u1("n1","p1","m1","num1","mdp1", bdd);
+    u.ajouterIBAN("123");
+    sc.ajouterUtilisateur(u);
+    sc.ajouterUtilisateur(u1);
+    bdd.ajouterCoordonneesBancaires(u);
 
-    //sc.ajouterUtilisateur(u1);
-   /* int n;
+    sc.ajouterUtilisateur(u1);
+    int n;
     n=sc.getListeUtilisateur().size();
     cout << n << endl;
     sc.verifierFormatMail(QString("r"));
     sc.verifierFormatTelephone(QString("0777777777"));
     sc.mailEstLibre(QString("m"));
 
+    u.creerCompteCommun();
+
+    FenetrePrincipale *mainW = new FenetrePrincipale();
+    mainW->show();
+    return app.exec();
 
 
+    /*
     //Creation d'un widget qui sert de fenêtre
     QWidget fenetre;
     fenetre.setFixedSize(450,450);
@@ -73,7 +79,7 @@ int main(int argc, char *argv[])
     //Affichage de la fenetre
     fenetre.show();
 
-    return app.exec();
+
 
 
     MainWindow w;

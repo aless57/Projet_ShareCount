@@ -48,7 +48,24 @@ public:
      * @return true (1) si  l'utilisateur correspondant au mail et au mdp rentrés en paramètre
      *         false (0)  si aucun utilisateur correspond
      */
-    bool connexionReussi(QString mail, QString mdp);
+    bool connexionReussie(QString mail, QString mdp);
+
+    /**
+     * @brief creerTableCompteCommun, la fonction qui crée la table CompteCommun dans la bdd
+    */
+    void creerTableCompteCommun();
+
+    /**
+     * @brief ajouterCompteCommun, ajoute un champ et un compte commun à la table Utilisateur, à la ligne de u
+     * @param u l'utilistateur auquel on ajoute un compte commun
+    */
+    void ajouterCompteCommun(Utilisateur u);
+
+    /**
+     * @brief ajouterContributeur, ajoute un champ et un utilisateur (contributeur) à la table CompteCommun, à la ligne de c
+     * @param c le compte commun auquel on ajute un contributeur u
+    */
+    void ajouterContributeur(CompteCommun c, Utilisateur u);
 };
 
 #endif // BASEDEDONNEES_H

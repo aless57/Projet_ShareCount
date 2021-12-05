@@ -1,10 +1,9 @@
 #include <iostream>
 #include <QList>
 #include <QSharedPointer>
-
+class Utilisateur;
 #ifndef COMPTECOMMUN_H
 #define COMPTECOMMUN_H
-#include "Utilisateur.h"
 using namespace std;
 
 /**

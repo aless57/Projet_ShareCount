@@ -24,7 +24,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        mainwindow.cpp \
+    affbudget.cpp \
+    connexion.cpp \
+    createuser.cpp \
+    fenetreprincipale.cpp \
     main.cpp \
     Sharecount.cpp \
     Utilisateur.cpp \
@@ -33,7 +36,10 @@ SOURCES += \
     Comptecommun.cpp
 
 HEADERS += \
-        mainwindow.h \
+    affbudget.h \
+    connexion.h \
+    createuser.h \
+    fenetreprincipale.h \
     Utilisateur.h \
     Sharecount.h \
     Gestionnairedialogue.h \
@@ -41,7 +47,10 @@ HEADERS += \
     Comptecommun.h
 
 FORMS += \
-        mainwindow.ui
+    affbudget.ui \
+    connexion.ui \
+    createuser.ui \
+    fenetreprincipale.ui \
 
 RESOURCES += \
     ressources.qrc

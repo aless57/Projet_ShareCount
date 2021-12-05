@@ -1,4 +1,5 @@
 #include "Comptecommun.h"
+#include "Utilisateur.h"
 
 
 /**

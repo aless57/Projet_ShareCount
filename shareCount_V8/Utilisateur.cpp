@@ -1,6 +1,6 @@
 #include "Utilisateur.h"
 #include "Comptecommun.h"
-
+#include "Basededonnees.h"
 
 /**
  * @brief Constructeur de la classe Utilisateur
@@ -10,13 +10,14 @@
  * @param num : le numero de telephone de l'utilisateur
  * @param mdp : mot de passe de l'utilisateur
  */
-Utilisateur::Utilisateur(QString n,QString p,QString m,QString num,QString mdp){
+Utilisateur::Utilisateur(QString n,QString p,QString m,QString num,QString mdp, BaseDeDonnees bdd){
     nom=n;
     prenom=p;
     mail=m;
     numeroTelephone=num;
     motDePasse=mdp;
     comptesCommuns=QList<CompteCommun>();
+    baseDeDonnees=bdd;
 }
 
 /**
@@ -33,6 +34,7 @@ void Utilisateur::ajouterIBAN(QString ib){
  */
 void Utilisateur::ajouterContributeur(Utilisateur& u,CompteCommun& c){
     c.ajouterContributeur(u);
+    baseDeDonnees.ajouterContributeur(c,u);
 }
 
 /**
@@ -48,5 +50,6 @@ void Utilisateur::freeListeComptesCommuns(){
  * @brief creerCompteCommun, la fonction qui permet à l'utilisateur de créer un compte commun
  */
 void Utilisateur::creerCompteCommun(){
-    //comptesCommuns.append(new CompteCommun(this));   ///ajoute le compte commun crée à la liste des comptes communs de l'utilisateur
+    comptesCommuns.append(*new CompteCommun(*this));///ajoute le compte commun crée à la liste des comptes communs de l'utilisateur
+    baseDeDonnees.ajouterCompteCommun(*this);
 }

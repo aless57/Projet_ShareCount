@@ -23,7 +23,7 @@ int BaseDeDonnees::creerBDD(){
         ///crée la table utilisateur si elle n'existe pas déjà
         if(query.exec("CREATE TABLE IF NOT EXISTS Utilisateur(mail VARCHAR(50) NOT NULL,nom VARCHAR(50) NOT NULL,prenom VARCHAR(50) NOT NULL,motDePasse VARCHAR(50) NOT NULL,numeroTelephone VARCHAR(50) NOT NULL,iban VARCHAR(100),PRIMARY KEY(mail));"
                       )){
-            std::cout << "Table Utilisateur crée " << std::endl;
+            std::cout << "Table Utilisateur créée " << std::endl;
         }else{  ///la reqête de création de table à échouée
             r=1;
         }
@@ -45,7 +45,7 @@ void BaseDeDonnees::ajouterDonnees(Utilisateur u){
     if(query.exec(requete)){
         std::cout << "utilisateur bien ajouté" << std::endl;
     }else{ ///l'execution de la requête à échouée
-        std::cout << "erreur dans l'ajout de l'utilisateur" << std::endl;
+        std::cout << "erreur dans l'ajout de l'utilisateur"s << std::endl;
     }
 }
 /**
@@ -71,7 +71,7 @@ void BaseDeDonnees::ajouterCoordonneesBancaires(Utilisateur u){
  * @return true (1) si  l'utilisateur correspondant au mail et au mdp rentrés en paramètre
  *         false (0)  si aucun utilisateur correspond
  */
-bool BaseDeDonnees::connexionReussi(QString mail, QString mdp){
+bool BaseDeDonnees::connexionReussie(QString mail, QString mdp){
     bool resultat_sql=false;
     QSqlQuery query;
     ///la requête sql pour trouver un utilisateur avec les paramètres de la fonction
@@ -85,5 +85,42 @@ bool BaseDeDonnees::connexionReussi(QString mail, QString mdp){
     }
     return resultat_sql;
 }
+
+/**
+ * @brief creerTableCompteCommun, la fonction qui crée la table CompteCommun dans la bdd
+ */
+void BaseDeDonnees::creerTableCompteCommun(){
+    QSqlQuery query;
+    ///la requête qui crée la table CompteCommun
+    QString requete="CREATE TABLE IF NOT EXISTS CompteCommun(id_Compte NUMBER(50) NOT NULL AUTO_INCREMENT , iban VARCHAR(100) as Iban Createur NOT NULL,  solde NUMBER(50) DEFAULT 0, PRIMARY KEY (id_Compte));";
+    ///execution de la requête
+    if(query.exec(requete)){
+        std::cout << "la requête d'ajout de la table CompteCommun a réussi " << std::endl;
+    }else{ ///l'execution de la requête à échouée
+        std::cout << "la requête d'ajout de la table CompteCommun a échoué" << std::endl;
+    }
+}
+
+/**
+ * @brief ajouterCompteCommun, ajoute un champ et un compte commun à la table Utilisateur, à la ligne de u
+ * @param u l'utilistateur auquel on ajoute un compte commun
+ */
+void BaseDeDonnees::ajouterCompteCommun(Utilisateur u){
+    QSqlQuery query;
+    ///la requête qui ajoute un nouveau compte commun à l'utilisateur u
+    QString requete="INSERT INTO CompteCommun (iban) VALUES (" + u.getIBAN() + ");";
+    ///execution de la requête
+    if(query.exec(requete)){
+        std::cout << "la requête de modification de la table CompteCommun a réussi " << std::endl;
+    }else{ ///l'execution de la requête à échouée
+        std::cout << "la requête de modification de la table CompteCommun a échoué" << std::endl;
+    }
+}
+
+/**
+ * @brief ajouterContributeur, ajoute un champ et un utilisateur (contributeur) à la table CompteCommun, à la ligne de c
+ * @param c le compte commun auquel on ajute un contributeur u
+ */
+void BaseDeDonnees::ajouterContributeur(CompteCommun c, Utilisateur u){}
 
 

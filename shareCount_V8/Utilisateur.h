@@ -3,7 +3,8 @@
 #include <QSharedPointer>
 #ifndef UTILISATEUR_H
 #define UTILISATEUR_H
-#include <Comptecommun.h>
+#include "Comptecommun.h"
+#include "Basededonnees.h"
 /**
  * @brief La classe représentant un utilisateur de l'application
  * @param nom de l'utilisatur
@@ -25,6 +26,7 @@ private:
     QString numeroTelephone;
     QString motDePasse;
     QList<CompteCommun> comptesCommuns;
+    BaseDeDonnees baseDeDonnees;
 
 public:
 
@@ -37,7 +39,7 @@ public:
      * @param mdp : mot de passe de l'utilisateur
      */
 
-    Utilisateur(QString n,QString p,QString m,QString num,QString mdp);
+    Utilisateur(QString n,QString p,QString m,QString num,QString mdp, BaseDeDonnees bdd);
 
     /**
      * @brief getNom, retourne le nom de l'utilisateur
