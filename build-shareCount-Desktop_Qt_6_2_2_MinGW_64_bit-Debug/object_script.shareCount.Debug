@@ -1,6 +1,6 @@
 debug/affbudget.o
 debug/connexion.o
-debug/createuser.o
+debug/fenetrecreationutilisateur.o
 debug/fenetreprincipale.o
 debug/main.o
 debug/Sharecount.o
@@ -11,5 +11,5 @@ debug/Comptecommun.o
 debug/qrc_ressources.o
 debug/moc_affbudget.o
 debug/moc_connexion.o
-debug/moc_createuser.o
+debug/moc_fenetrecreationutilisateur.o
 debug/moc_fenetreprincipale.o

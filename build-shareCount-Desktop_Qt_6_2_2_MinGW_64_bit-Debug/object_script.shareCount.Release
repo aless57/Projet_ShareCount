@@ -1,6 +1,6 @@
 release/affbudget.o
 release/connexion.o
-release/createuser.o
+release/fenetrecreationutilisateur.o
 release/fenetreprincipale.o
 release/main.o
 release/Sharecount.o
@@ -11,5 +11,5 @@ release/Comptecommun.o
 release/qrc_ressources.o
 release/moc_affbudget.o
 release/moc_connexion.o
-release/moc_createuser.o
+release/moc_fenetrecreationutilisateur.o
 release/moc_fenetreprincipale.o

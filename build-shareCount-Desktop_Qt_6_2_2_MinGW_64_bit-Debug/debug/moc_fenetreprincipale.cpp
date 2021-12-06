@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../shareCount_V8/fenetreprincipale.h"
+#include "F:/Bureau/shareCount_V9/fenetreprincipale.h"
 #include <QtGui/qtextcursor.h>
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
