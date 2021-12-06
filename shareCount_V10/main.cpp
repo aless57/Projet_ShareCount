@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
     BaseDeDonnees bdd;
     ShareCount sc(bdd);
     int r=bdd.creerBDD();
+
     if(r==1){
         std::cout << "Erreur lors de la création de la table Utilisateur" << std::endl;
         return 1;
@@ -30,7 +31,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
+    //Utilisateur *u = new Utilisateur("demange", "alessi", "demangealessi@gmail.com", "066644442187", "YO57", bdd);
+    //sc.setUtilisateur(*u);
 
     FenetrePrincipale *mainW = new FenetrePrincipale(bdd,sc);
     mainW->show();

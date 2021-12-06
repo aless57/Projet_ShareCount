@@ -1,8 +1,8 @@
+#ifndef UTILISATEUR_H
+#define UTILISATEUR_H
 #include <iostream>
 #include <QString>
 #include <QSharedPointer>
-#ifndef UTILISATEUR_H
-#define UTILISATEUR_H
 #include "Comptecommun.h"
 #include "Basededonnees.h"
 /**
@@ -72,8 +72,8 @@ public:
     QString getMotDePasse(){return motDePasse;}
 
     /**
-     * @brief ajouterIBAN ajoute l'iban de l'utilisateur
-     * @param ib l'iban de l'utilisateur
+     * @brief ajouterIBAN, ajoute l'iban de l'utilisateur
+     * @param ib, l'iban de l'utilisateur
      */
     void ajouterIBAN(QString ib);
 
@@ -85,8 +85,10 @@ public:
     QString getIBAN(){return iban;}
 
     /**
-     * @brief ajouterContributeur,
-     * @param u
+     * @brief ajouterContributeur, fonction qui permet d'ajouter un contributeur a un compte commun
+     * que ce soit dans la structure interne ou dans la base de données
+     * @param u, l'utilisateur qui crée le compte
+     * @param c, le compte commun crée
      */
     void ajouterContributeur(Utilisateur& u,CompteCommun& c);
 

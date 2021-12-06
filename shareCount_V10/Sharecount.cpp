@@ -9,7 +9,7 @@ ShareCount::ShareCount(BaseDeDonnees bdd){
 }
 
 /**
- * @brief getter de la liste des utilisateur
+ * @brief getter de la liste des utilisateurs
  * @return la liste des utilisateurs
  */
 QList<Utilisateur> ShareCount::getListeUtilisateur(){
@@ -17,8 +17,9 @@ QList<Utilisateur> ShareCount::getListeUtilisateur(){
 }
 
 
-/** @brief ajoute un utilisateur à la collection et à la base de données
-* @param u un utilisateur
+/**
+* @brief ajoute un utilisateur à la collection et à la base de données
+* @param u l'utilisateur à ajouter
 */
 bool ShareCount::ajouterUtilisateur(Utilisateur u){
     bool test = baseDeDonnees.ajouterDonnees(u);
@@ -30,17 +31,22 @@ bool ShareCount::ajouterUtilisateur(Utilisateur u){
 
 }
 
+/**
+* @brief ajout d'un utilisateur dans la liste des utilisateurs sans le faire dans la base de données
+* @param l'utilisateur à ajouter
+*/
 void ShareCount::setUtilisateur(Utilisateur u) {
     listeUtilisateur.append(u); ///ajoute l'utilisateur u à la liste d'utilisateur
 }
 
 /**
-* @brief verifie le format d'un mail
+* @brief vérifie le format d'un mail
 * le format accepté est
 * aa@bb.cc
 * @param m un mail
 */
 bool ShareCount::verifierFormatMail(QString m){
+    /// initialisation de la variable de retours
     bool res = false;
     ///Regex correspondant au format d'un mail
     QRegularExpression mailRegex("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}");
@@ -55,11 +61,11 @@ bool ShareCount::verifierFormatMail(QString m){
 }
 
 /**
-* @brief verifie le format d'un numero de telephone
+* @brief vérifie le format d'un numero de telephone
 * les formats acceptés sont:
 *  0 + 9 chiffres
 * ou +33 + 8 chiffres
-* @param tel un numero de telephone
+* @param tel, un numero de telephone
 */
 bool ShareCount::verifierFormatTelephone(QString tel){
     bool res = false;
@@ -76,7 +82,7 @@ bool ShareCount::verifierFormatTelephone(QString tel){
 }
 
 /**
-* @brief verifie si le mail donné en parametre est deja utilise par un autre utilisateur
+* @brief verifie si le mail donné en paramètre est déjà utilisé par un autre utilisateur
 * @param m un mail
 */
 void ShareCount::mailEstLibre(QString m){

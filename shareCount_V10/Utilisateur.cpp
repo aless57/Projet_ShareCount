@@ -5,9 +5,9 @@
 /**
  * @brief Constructeur de la classe Utilisateur
  * @param n : le nom de l'utilisateur
- * @param p : le prenom de l'utilisateur
+ * @param p : le prénom de l'utilisateur
  * @param m : le mail de l'utilisateur
- * @param num : le numero de telephone de l'utilisateur
+ * @param num : le numéro de telephone de l'utilisateur
  * @param mdp : mot de passe de l'utilisateur
  */
 Utilisateur::Utilisateur(QString n,QString p,QString m,QString num,QString mdp, BaseDeDonnees bdd){
@@ -21,16 +21,18 @@ Utilisateur::Utilisateur(QString n,QString p,QString m,QString num,QString mdp, 
 }
 
 /**
- * @brief ajouterIBAN ajoute l'iban de l'utilisateur
- * @param ib l'iban de l'utilisateur
+ * @brief ajouterIBAN, ajoute l'iban de l'utilisateur
+ * @param ib, l'iban de l'utilisateur
  */
 void Utilisateur::ajouterIBAN(QString ib){
     iban=ib;
 }
 
 /**
- * @brief ajouterContributeur,
- * @param u
+ * @brief ajouterContributeur, fonction qui permet d'ajouter un contributeur a un compte commun
+ * que ce soit dans la structure interne ou dans la base de données
+ * @param u, l'utilisateur qui crée le compte
+ * @param c, le compte commun crée
  */
 void Utilisateur::ajouterContributeur(Utilisateur& u,CompteCommun& c){
     c.ajouterContributeur(u);
