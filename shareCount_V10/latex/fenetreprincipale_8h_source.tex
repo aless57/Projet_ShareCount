@@ -1,0 +1,36 @@
+\hypertarget{fenetreprincipale_8h_source}{}\doxysection{fenetreprincipale.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FENETREPRINCIPALE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FENETREPRINCIPALE\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}fenetrecreationutilisateur.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}connexion.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Basededonnees.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Sharecount.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_fenetre_principale}{FenetrePrincipale}};}
+\DoxyCodeLine{11 \}}
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_fenetre_principale}{FenetrePrincipale}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     Q\_OBJECT}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_fenetre_principale_a9c66dd230394e6233e3f1abc92155f5b}{FenetrePrincipale}}(\mbox{\hyperlink{class_base_de_donnees}{BaseDeDonnees}} bdd, \mbox{\hyperlink{class_share_count}{ShareCount}} sc, QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_fenetre_principale}{\string~FenetrePrincipale}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} on\_pushButton\_2\_clicked();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} on\_pushButton\_clicked();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{private}:}
+\DoxyCodeLine{44     Ui::FenetrePrincipale *ui;}
+\DoxyCodeLine{45     \mbox{\hyperlink{class_base_de_donnees}{BaseDeDonnees}} basedd;}
+\DoxyCodeLine{46     \mbox{\hyperlink{class_share_count}{ShareCount}} Sharec;}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FENETREPRINCIPALE\_H}}
+
+\end{DoxyCode}

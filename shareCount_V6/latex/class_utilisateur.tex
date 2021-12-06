@@ -23,7 +23,11 @@ QString \mbox{\hyperlink{class_utilisateur_a5223b968f96419943eb60072c3016dce}{ge
 QString \mbox{\hyperlink{class_utilisateur_a4420b4083b811252a154f18bc92d9d92}{get\+Numero\+Telephone}} ()
 \begin{DoxyCompactList}\small\item\em get\+Numero\+Telephone, retourne le numero de telephone de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
 QString \mbox{\hyperlink{class_utilisateur_aca3871233a273106a85c8489b56e882a}{get\+Mot\+De\+Passe}} ()
-\begin{DoxyCompactList}\small\item\em get\+Mot\+De\+Passe, retourne le mot de passe de l\textquotesingle{}utilisateur \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em get\+Mot\+De\+Passe, retourne le mot de passe de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utilisateur_ae912908aba8054c939fdfe21875b8141}{ajouter\+IBAN}} (QString ib)
+\begin{DoxyCompactList}\small\item\em ajouter\+IBAN ajoute l\textquotesingle{}iban de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_utilisateur_a6c05bc611edcaeb051adb9c4b66686a9}{get\+IBAN}} ()
+\begin{DoxyCompactList}\small\item\em get\+IBAN, retourne l\textquotesingle{}iban de l\textquotesingle{}utilisateur \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -40,8 +44,6 @@ La classe représentant un utilisateur de l\textquotesingle{}application.
 {\em mail} & de l\textquotesingle{}utilisateur \\
 \hline
 {\em numero\+Telephone} & de l\textquotesingle{}utilisateur \\
-\hline
-{\em identifiant} & unique pour différencier l\textquotesingle{}utilisateur des autres \\
 \hline
 {\em mot\+De\+Passe} & de l\textquotesingle{}utilisateur \\
 \hline
@@ -77,6 +79,34 @@ Constructeur de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_utilisateur_ae912908aba8054c939fdfe21875b8141}\label{class_utilisateur_ae912908aba8054c939fdfe21875b8141}} 
+\index{Utilisateur@{Utilisateur}!ajouterIBAN@{ajouterIBAN}}
+\index{ajouterIBAN@{ajouterIBAN}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{ajouterIBAN()}{ajouterIBAN()}}
+{\footnotesize\ttfamily void Utilisateur\+::ajouter\+IBAN (\begin{DoxyParamCaption}\item[{QString}]{ib }\end{DoxyParamCaption})}
+
+
+
+ajouter\+IBAN ajoute l\textquotesingle{}iban de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ib} & l\textquotesingle{}iban de l\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_utilisateur_a6c05bc611edcaeb051adb9c4b66686a9}\label{class_utilisateur_a6c05bc611edcaeb051adb9c4b66686a9}} 
+\index{Utilisateur@{Utilisateur}!getIBAN@{getIBAN}}
+\index{getIBAN@{getIBAN}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getIBAN()}{getIBAN()}}
+{\footnotesize\ttfamily QString Utilisateur\+::get\+IBAN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+IBAN, retourne l\textquotesingle{}iban de l\textquotesingle{}utilisateur 
+
+\begin{DoxyReturn}{Returns}
+iban,l\textquotesingle{}iban de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_utilisateur_a5223b968f96419943eb60072c3016dce}\label{class_utilisateur_a5223b968f96419943eb60072c3016dce}} 
 \index{Utilisateur@{Utilisateur}!getMail@{getMail}}
 \index{getMail@{getMail}!Utilisateur@{Utilisateur}}

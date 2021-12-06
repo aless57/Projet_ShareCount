@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sharecount_0',['ShareCount',['../class_share_count.html',1,'']]]
+  ['comptecommun_0',['CompteCommun',['../class_compte_commun.html',1,'']]],
+  ['connexion_1',['Connexion',['../class_connexion.html',1,'']]]
 ];

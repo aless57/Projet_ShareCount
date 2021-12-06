@@ -1,0 +1,108 @@
+\hypertarget{class_base_de_donnees}{}\doxysection{Base\+De\+Donnees Class Reference}
+\label{class_base_de_donnees}\index{BaseDeDonnees@{BaseDeDonnees}}
+
+
+The \mbox{\hyperlink{class_base_de_donnees}{Base\+De\+Donnees}} class crée et gère les requêtes sql.  
+
+
+
+
+{\ttfamily \#include $<$Basededonnees.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_de_donnees_ac4d0c514f439b3a19dc35c159955373a}{Base\+De\+Donnees}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_base_de_donnees}{Base\+De\+Donnees}} Crée la base de données associée à l\textquotesingle{}application si elle n\textquotesingle{}existe pas déjà et la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}{creer\+BDD}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}{Base\+De\+Donnees\+::creer\+BDD}} la fonction qui crée la base de données associée à l\textquotesingle{}application si elle n\textquotesingle{}existe pas déjà et la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_de_donnees_a65a455c18b524e10e69446af5a3f01e7}{ajouter\+Donnees}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u)
+\begin{DoxyCompactList}\small\item\em ajouter\+Donnees la fonction qui ajoute les donnees rentrées par l\textquotesingle{}utilisateur dans la base de données \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_de_donnees_a89da3a1457d2c85edfa95d8eac6a8daf}{ajouter\+Coordonnees\+Bancaires}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u)
+\begin{DoxyCompactList}\small\item\em ajoute les coordonnées bancaires rentrées par l\textquotesingle{}utilisateur u \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_base_de_donnees}{Base\+De\+Donnees}} class crée et gère les requêtes sql. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_base_de_donnees_ac4d0c514f439b3a19dc35c159955373a}\label{class_base_de_donnees_ac4d0c514f439b3a19dc35c159955373a}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!BaseDeDonnees@{BaseDeDonnees}}
+\index{BaseDeDonnees@{BaseDeDonnees}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{BaseDeDonnees()}{BaseDeDonnees()}}
+{\footnotesize\ttfamily Base\+De\+Donnees\+::\+Base\+De\+Donnees (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{class_base_de_donnees}{Base\+De\+Donnees}} Crée la base de données associée à l\textquotesingle{}application si elle n\textquotesingle{}existe pas déjà et la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}. 
+
+Constructeur de la classe \mbox{\hyperlink{class_base_de_donnees}{Base\+De\+Donnees}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_de_donnees_a89da3a1457d2c85edfa95d8eac6a8daf}\label{class_base_de_donnees_a89da3a1457d2c85edfa95d8eac6a8daf}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!ajouterCoordonneesBancaires@{ajouterCoordonneesBancaires}}
+\index{ajouterCoordonneesBancaires@{ajouterCoordonneesBancaires}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{ajouterCoordonneesBancaires()}{ajouterCoordonneesBancaires()}}
+{\footnotesize\ttfamily void Base\+De\+Donnees\+::ajouter\+Coordonnees\+Bancaires (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{u }\end{DoxyParamCaption})}
+
+
+
+ajoute les coordonnées bancaires rentrées par l\textquotesingle{}utilisateur u 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & l\textquotesingle{}utilisateur qui rentre ses coordonnées \\
+\hline
+\end{DoxyParams}
+la requête sql pour ajouter les coordonnées bancaires de l\textquotesingle{}utilisateur u
+
+execution de la requête
+
+l\textquotesingle{}execution de la requête à échouée\mbox{\Hypertarget{class_base_de_donnees_a65a455c18b524e10e69446af5a3f01e7}\label{class_base_de_donnees_a65a455c18b524e10e69446af5a3f01e7}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!ajouterDonnees@{ajouterDonnees}}
+\index{ajouterDonnees@{ajouterDonnees}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{ajouterDonnees()}{ajouterDonnees()}}
+{\footnotesize\ttfamily void Base\+De\+Donnees\+::ajouter\+Donnees (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{u }\end{DoxyParamCaption})}
+
+
+
+ajouter\+Donnees la fonction qui ajoute les donnees rentrées par l\textquotesingle{}utilisateur dans la base de données 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & l\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+la requete sql pour ajouter un utilisateur dans la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}
+
+execution de la requête
+
+l\textquotesingle{}execution de la requête à échouée\mbox{\Hypertarget{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}\label{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!creerBDD@{creerBDD}}
+\index{creerBDD@{creerBDD}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{creerBDD()}{creerBDD()}}
+{\footnotesize\ttfamily int Base\+De\+Donnees\+::creer\+BDD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}{Base\+De\+Donnees\+::creer\+BDD}} la fonction qui crée la base de données associée à l\textquotesingle{}application si elle n\textquotesingle{}existe pas déjà et la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}. 
+
+\begin{DoxyReturn}{Returns}
+le code d\textquotesingle{}erreur 0 si tout est okay 1 si la table n\textquotesingle{}a pas pu être crée 2 si la bdd a rencontrée un problème lors de l\textquotesingle{}ouverture 
+\end{DoxyReturn}
+cré la base de données dans le répertoire
+
+ouvre la base de données
+
+crée la table utilisateur si elle n\textquotesingle{}existe pas déjà
+
+la reqête de création de table à échouée
+
+l\textquotesingle{}ouverture de la base de données à échouée
+
+le code d\textquotesingle{}erreur
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Basededonnees.\+h\item 
+Basededonnees.\+cpp\end{DoxyCompactItemize}

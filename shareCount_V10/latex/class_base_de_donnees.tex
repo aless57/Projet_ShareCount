@@ -1,0 +1,241 @@
+\hypertarget{class_base_de_donnees}{}\doxysection{Base\+De\+Donnees Class Reference}
+\label{class_base_de_donnees}\index{BaseDeDonnees@{BaseDeDonnees}}
+
+
+The \mbox{\hyperlink{class_base_de_donnees}{Base\+De\+Donnees}} class crée et gère les requêtes sql.  
+
+
+
+
+{\ttfamily \#include $<$Basededonnees.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_base_de_donnees_ac4d0c514f439b3a19dc35c159955373a}\label{class_base_de_donnees_ac4d0c514f439b3a19dc35c159955373a}} 
+{\bfseries Base\+De\+Donnees} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_base_de_donnees}{Base\+De\+Donnees}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}{creer\+BDD}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}{Base\+De\+Donnees\+::creer\+BDD}} la fonction qui créée la base de données associée à l\textquotesingle{}application si elle n\textquotesingle{}existe pas déjà et la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_de_donnees_a81cb12fce2b8bead667ca2f3cc369ea7}{ajouter\+Donnees}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u)
+\begin{DoxyCompactList}\small\item\em ajouter\+Donnees la fonction qui ajoute les données rentrées par l\textquotesingle{}utilisateur dans la base de données \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_de_donnees_a89da3a1457d2c85edfa95d8eac6a8daf}{ajouter\+Coordonnees\+Bancaires}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u)
+\begin{DoxyCompactList}\small\item\em ajoute les coordonnées bancaires rentrées par l\textquotesingle{}utilisateur u \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \mbox{\hyperlink{class_base_de_donnees_a3e126c7d5a70ac493c2e99869eae0b89}{trouver\+Utilisateur}} (QString mail, QString mdp)
+\begin{DoxyCompactList}\small\item\em trouver\+Utilisateur, permet de récupérer et créer un utilisateur grâce à son mail et son mdp passés en paramètre \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_de_donnees_a26fc63b27f0eb91c980a7e84b4a7fb1d}{connexion\+Reussie}} (QString mail, QString mdp)
+\begin{DoxyCompactList}\small\item\em connexion\+Reussie, vérifie si l\textquotesingle{}utilisateur correspond aux données rentrées en paramètre \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_de_donnees_ac3d683c30783188777ea44bc345482fe}{creer\+Table\+Compte\+Commun}} ()
+\begin{DoxyCompactList}\small\item\em creer\+Table\+Compte\+Commun, la fonction qui crée la table \mbox{\hyperlink{class_compte_commun}{Compte\+Commun}} dans la bdd \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_de_donnees_a6bd2a0cb1fedb4533d0622edc62c523e}{ajouter\+Compte\+Commun}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u)
+\begin{DoxyCompactList}\small\item\em ajouter\+Compte\+Commun, ajoute un champ et un compte commun à la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, à la ligne de u \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_de_donnees_a026a60677be8828b525f8039214fc0ff}{ajouter\+Contributeur}} (\mbox{\hyperlink{class_compte_commun}{Compte\+Commun}} c, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} u)
+\begin{DoxyCompactList}\small\item\em ajouter\+Contributeur, ajoute un champ et un utilisateur (contributeur) à la table \mbox{\hyperlink{class_compte_commun}{Compte\+Commun}}, à la ligne de c \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_base_de_donnees}{Base\+De\+Donnees}} class crée et gère les requêtes sql. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_de_donnees_a6bd2a0cb1fedb4533d0622edc62c523e}\label{class_base_de_donnees_a6bd2a0cb1fedb4533d0622edc62c523e}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!ajouterCompteCommun@{ajouterCompteCommun}}
+\index{ajouterCompteCommun@{ajouterCompteCommun}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{ajouterCompteCommun()}{ajouterCompteCommun()}}
+{\footnotesize\ttfamily void Base\+De\+Donnees\+::ajouter\+Compte\+Commun (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{u }\end{DoxyParamCaption})}
+
+
+
+ajouter\+Compte\+Commun, ajoute un champ et un compte commun à la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, à la ligne de u 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & l\textquotesingle{}utilistateur auquel on ajoute un compte commun \\
+\hline
+\end{DoxyParams}
+la requête qui ajoute un nouveau compte commun à l\textquotesingle{}utilisateur u
+
+execution de la requête
+
+l\textquotesingle{}execution de la requête à échouée
+
+récupération du message d\textquotesingle{}erreur\mbox{\Hypertarget{class_base_de_donnees_a026a60677be8828b525f8039214fc0ff}\label{class_base_de_donnees_a026a60677be8828b525f8039214fc0ff}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!ajouterContributeur@{ajouterContributeur}}
+\index{ajouterContributeur@{ajouterContributeur}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{ajouterContributeur()}{ajouterContributeur()}}
+{\footnotesize\ttfamily void Base\+De\+Donnees\+::ajouter\+Contributeur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_compte_commun}{Compte\+Commun}}}]{c,  }\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{u }\end{DoxyParamCaption})}
+
+
+
+ajouter\+Contributeur, ajoute un champ et un utilisateur (contributeur) à la table \mbox{\hyperlink{class_compte_commun}{Compte\+Commun}}, à la ligne de c 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & le compte commun auquel on ajute un contributeur u \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_de_donnees_a89da3a1457d2c85edfa95d8eac6a8daf}\label{class_base_de_donnees_a89da3a1457d2c85edfa95d8eac6a8daf}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!ajouterCoordonneesBancaires@{ajouterCoordonneesBancaires}}
+\index{ajouterCoordonneesBancaires@{ajouterCoordonneesBancaires}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{ajouterCoordonneesBancaires()}{ajouterCoordonneesBancaires()}}
+{\footnotesize\ttfamily void Base\+De\+Donnees\+::ajouter\+Coordonnees\+Bancaires (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{u }\end{DoxyParamCaption})}
+
+
+
+ajoute les coordonnées bancaires rentrées par l\textquotesingle{}utilisateur u 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & l\textquotesingle{}utilisateur qui rentre ses coordonnées \\
+\hline
+\end{DoxyParams}
+la requête sql pour ajouter les coordonnées bancaires de l\textquotesingle{}utilisateur u
+
+exécution de la requête
+
+l\textquotesingle{}execution de la requête a échouée
+
+récupération du message d\textquotesingle{}erreur\mbox{\Hypertarget{class_base_de_donnees_a81cb12fce2b8bead667ca2f3cc369ea7}\label{class_base_de_donnees_a81cb12fce2b8bead667ca2f3cc369ea7}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!ajouterDonnees@{ajouterDonnees}}
+\index{ajouterDonnees@{ajouterDonnees}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{ajouterDonnees()}{ajouterDonnees()}}
+{\footnotesize\ttfamily bool Base\+De\+Donnees\+::ajouter\+Donnees (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{u }\end{DoxyParamCaption})}
+
+
+
+ajouter\+Donnees la fonction qui ajoute les données rentrées par l\textquotesingle{}utilisateur dans la base de données 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & l\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true (1) si la requête a été effectuée false (0) sinon 
+\end{DoxyReturn}
+initialisation de la variable de retour
+
+la requete sql pour ajouter un utilisateur dans la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}
+
+exécution de la requête
+
+l\textquotesingle{}éxécution de la requête a échouée
+
+récupération du message d\textquotesingle{}erreur
+
+retour du code d\textquotesingle{}erreur\mbox{\Hypertarget{class_base_de_donnees_a26fc63b27f0eb91c980a7e84b4a7fb1d}\label{class_base_de_donnees_a26fc63b27f0eb91c980a7e84b4a7fb1d}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!connexionReussie@{connexionReussie}}
+\index{connexionReussie@{connexionReussie}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{connexionReussie()}{connexionReussie()}}
+{\footnotesize\ttfamily bool Base\+De\+Donnees\+::connexion\+Reussie (\begin{DoxyParamCaption}\item[{QString}]{mail,  }\item[{QString}]{mdp }\end{DoxyParamCaption})}
+
+
+
+connexion\+Reussie, vérifie si l\textquotesingle{}utilisateur correspond aux données rentrées en paramètre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail,le} & mail rentré par l\textquotesingle{}utilisateur \\
+\hline
+{\em mdp,le} & mot de passe rentré par l\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true (1) si l\textquotesingle{}utilisateur a bien été trouvé grâce au mail et au mdp rentrés en paramètre false (0) sinon 
+\end{DoxyReturn}
+initialisation de la variable de retour
+
+la requête sql pour trouver un utilisateur avec les paramètres de la fonction
+
+exécution de la requête
+
+mise en place du premier résultat de la requête
+
+récupération du Count($\ast$) soit le résultat de la requête
+
+l\textquotesingle{}utilisateur a été trouvé
+
+l\textquotesingle{}utilisateur n\textquotesingle{}a pas été trouvé
+
+récupération du message d\textquotesingle{}erreur
+
+retour du code d\textquotesingle{}erreur\mbox{\Hypertarget{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}\label{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!creerBDD@{creerBDD}}
+\index{creerBDD@{creerBDD}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{creerBDD()}{creerBDD()}}
+{\footnotesize\ttfamily int Base\+De\+Donnees\+::creer\+BDD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}{Base\+De\+Donnees\+::creer\+BDD}} la fonction qui créée la base de données associée à l\textquotesingle{}application si elle n\textquotesingle{}existe pas déjà et la table \mbox{\hyperlink{class_utilisateur}{Utilisateur}}. 
+
+\begin{DoxyReturn}{Returns}
+le code d\textquotesingle{}erreur 0 si l\textquotesingle{}opération s\textquotesingle{}est bien déroulée 1 si la table n\textquotesingle{}a pas pu être créée 2 si la bdd a rencontrée un problême lors de l\textquotesingle{}ouverture 
+\end{DoxyReturn}
+initialisation de la variable de retour
+
+création de la base de données
+
+mise en place de la base de données à partir du fichier d\textquotesingle{}installation
+
+ouverture de la base de données
+
+création de la table utilisateur si cette dernière n\textquotesingle{}est pas déjà créée
+
+la création de table a échouée
+
+l\textquotesingle{}ouverture de la base de données a échouée
+
+retour du code d\textquotesingle{}erreur\mbox{\Hypertarget{class_base_de_donnees_ac3d683c30783188777ea44bc345482fe}\label{class_base_de_donnees_ac3d683c30783188777ea44bc345482fe}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!creerTableCompteCommun@{creerTableCompteCommun}}
+\index{creerTableCompteCommun@{creerTableCompteCommun}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{creerTableCompteCommun()}{creerTableCompteCommun()}}
+{\footnotesize\ttfamily void Base\+De\+Donnees\+::creer\+Table\+Compte\+Commun (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+creer\+Table\+Compte\+Commun, la fonction qui crée la table \mbox{\hyperlink{class_compte_commun}{Compte\+Commun}} dans la bdd 
+
+la requête qui créée la table \mbox{\hyperlink{class_compte_commun}{Compte\+Commun}}
+
+exécution de la requête
+
+l\textquotesingle{}exécution de la requête a échouée
+
+récupération du message d\textquotesingle{}erreur\mbox{\Hypertarget{class_base_de_donnees_a3e126c7d5a70ac493c2e99869eae0b89}\label{class_base_de_donnees_a3e126c7d5a70ac493c2e99869eae0b89}} 
+\index{BaseDeDonnees@{BaseDeDonnees}!trouverUtilisateur@{trouverUtilisateur}}
+\index{trouverUtilisateur@{trouverUtilisateur}!BaseDeDonnees@{BaseDeDonnees}}
+\doxysubsubsection{\texorpdfstring{trouverUtilisateur()}{trouverUtilisateur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_utilisateur}{Utilisateur}} Base\+De\+Donnees\+::trouver\+Utilisateur (\begin{DoxyParamCaption}\item[{QString}]{mail,  }\item[{QString}]{mdp }\end{DoxyParamCaption})}
+
+
+
+trouver\+Utilisateur, permet de récupérer et créer un utilisateur grâce à son mail et son mdp passés en paramètre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail,le} & mail rentré par l\textquotesingle{}utilisateur \\
+\hline
+{\em mdp,le} & mot de passe rentré par l\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Utilisateur$\ast$ u 
+\end{DoxyReturn}
+initialisation des différentes variables nécessaires à la création d\textquotesingle{}un \mbox{\hyperlink{class_utilisateur}{Utilisateur}}
+
+création de la requête
+
+exécution de la requête
+
+récupération des données
+
+création de l\textquotesingle{}\mbox{\hyperlink{class_utilisateur}{Utilisateur}}
+
+récupération du message d\textquotesingle{}erreur
+
+retour de l\textquotesingle{}utilisateur crée
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Basededonnees.\+h\item 
+Basededonnees.\+cpp\end{DoxyCompactItemize}

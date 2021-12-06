@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sharecount_0',['ShareCount',['../class_share_count.html',1,'']]]
+  ['mainwindow_0',['MainWindow',['../class_main_window.html',1,'']]]
 ];

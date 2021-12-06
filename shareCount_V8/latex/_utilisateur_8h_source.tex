@@ -1,12 +1,13 @@
 \hypertarget{_utilisateur_8h_source}{}\doxysection{Utilisateur.\+h}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef UTILISATEUR\_H}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#define UTILISATEUR\_H}}
-\DoxyCodeLine{3 }
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QString>}}
-\DoxyCodeLine{6 }
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <QString>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QSharedPointer>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef UTILISATEUR\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define UTILISATEUR\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Comptecommun.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Basededonnees.h"{}}}
 \DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_utilisateur}{Utilisateur}}\{}
 \DoxyCodeLine{20 }
 \DoxyCodeLine{21 \textcolor{keyword}{private}:}
@@ -16,26 +17,36 @@
 \DoxyCodeLine{25     QString mail;}
 \DoxyCodeLine{26     QString numeroTelephone;}
 \DoxyCodeLine{27     QString motDePasse;}
-\DoxyCodeLine{28 }
-\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     QList<CompteCommun> comptesCommuns;}
+\DoxyCodeLine{29     BaseDeDonnees baseDeDonnees;}
 \DoxyCodeLine{30 }
-\DoxyCodeLine{40     \mbox{\hyperlink{class_utilisateur_adbbbac90e3930b6cb82419a8e7c34a9f}{Utilisateur}}(QString n,QString p,QString m,QString num,QString mdp);}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{46     QString \mbox{\hyperlink{class_utilisateur_a84a4aa7b7f2fde194e9c706a8eb711e5}{getNom}}()\{\textcolor{keywordflow}{return} nom;\}}
-\DoxyCodeLine{47 }
-\DoxyCodeLine{52     QString \mbox{\hyperlink{class_utilisateur_a6b4d6fa5c9b5c8565c2f2d1f68df9bf3}{getPrenom}}()\{\textcolor{keywordflow}{return} prenom;\}}
-\DoxyCodeLine{53 }
-\DoxyCodeLine{58     QString \mbox{\hyperlink{class_utilisateur_a5223b968f96419943eb60072c3016dce}{getMail}}()\{\textcolor{keywordflow}{return} mail;\}}
-\DoxyCodeLine{59 }
-\DoxyCodeLine{64     QString \mbox{\hyperlink{class_utilisateur_a4420b4083b811252a154f18bc92d9d92}{getNumeroTelephone}}()\{\textcolor{keywordflow}{return} numeroTelephone;\}}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{70     QString \mbox{\hyperlink{class_utilisateur_aca3871233a273106a85c8489b56e882a}{getMotDePasse}}()\{\textcolor{keywordflow}{return} motDePasse;\}}
-\DoxyCodeLine{71 }
-\DoxyCodeLine{72 }
+\DoxyCodeLine{31 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{42     \mbox{\hyperlink{class_utilisateur_a1c92a1f3cceacd23536d646a7f4b8d62}{Utilisateur}}(QString n,QString p,QString m,QString num,QString mdp, BaseDeDonnees bdd);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48     QString \mbox{\hyperlink{class_utilisateur_a84a4aa7b7f2fde194e9c706a8eb711e5}{getNom}}()\{\textcolor{keywordflow}{return} nom;\}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{54     QString \mbox{\hyperlink{class_utilisateur_a6b4d6fa5c9b5c8565c2f2d1f68df9bf3}{getPrenom}}()\{\textcolor{keywordflow}{return} prenom;\}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{60     QString \mbox{\hyperlink{class_utilisateur_a5223b968f96419943eb60072c3016dce}{getMail}}()\{\textcolor{keywordflow}{return} mail;\}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{66     QString \mbox{\hyperlink{class_utilisateur_a4420b4083b811252a154f18bc92d9d92}{getNumeroTelephone}}()\{\textcolor{keywordflow}{return} numeroTelephone;\}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72     QString \mbox{\hyperlink{class_utilisateur_aca3871233a273106a85c8489b56e882a}{getMotDePasse}}()\{\textcolor{keywordflow}{return} motDePasse;\}}
 \DoxyCodeLine{73 }
-\DoxyCodeLine{74 }
-\DoxyCodeLine{75 \};}
-\DoxyCodeLine{76 }
-\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UTILISATEUR\_H}}
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_utilisateur_ae912908aba8054c939fdfe21875b8141}{ajouterIBAN}}(QString ib);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 }
+\DoxyCodeLine{85     QString \mbox{\hyperlink{class_utilisateur_a6c05bc611edcaeb051adb9c4b66686a9}{getIBAN}}()\{\textcolor{keywordflow}{return} iban;\}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_utilisateur_a5056d8e9c7dd59c09ba5da74b7dc8e83}{ajouterContributeur}}(\mbox{\hyperlink{class_utilisateur}{Utilisateur}}\& u,\mbox{\hyperlink{class_compte_commun}{CompteCommun}}\& c);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_utilisateur_ac87a2fa219ac3ab3e0343644d173d40b}{freeListeComptesCommuns}}();}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{101     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_utilisateur_ace32dfb033d21a453c975621ddb0dc23}{creerCompteCommun}}();}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UTILISATEUR\_H}}
 
 \end{DoxyCode}

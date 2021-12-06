@@ -12,17 +12,28 @@ The \mbox{\hyperlink{class_share_count}{Share\+Count}} class.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_share_count_a2f168e40fb286774b8d1e6dc1c1e5025}\label{class_share_count_a2f168e40fb286774b8d1e6dc1c1e5025}} 
-{\bfseries Share\+Count} ()
+\mbox{\Hypertarget{class_share_count_a2c615fc695586529128acbd5694503b9}\label{class_share_count_a2c615fc695586529128acbd5694503b9}} 
+{\bfseries Share\+Count} (Base\+De\+Donnees bdd)
 \begin{DoxyCompactList}\small\item\em constructeur de la classe \mbox{\hyperlink{class_share_count}{Share\+Count}} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_share_count_a7b5fc72b29a278c1465fa368cdb5fc02}{ajouter\+Utilisateur}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u)
-\begin{DoxyCompactList}\small\item\em ajoute un utilisateur à la collection \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_share_count_aa2c747501448e6bf2bf2917a42734403}{verifier\+Format\+Mail}} (QString m)
+QList$<$ \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$ \mbox{\hyperlink{class_share_count_a18f05362dcb42b6474eb0692e02a1aa9}{get\+Liste\+Utilisateur}} ()
+\begin{DoxyCompactList}\small\item\em getter de la liste des utilisateur \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_share_count_a31cd8b524fcc5c1a0923fe2210a6d1b3}{ajouter\+Utilisateur}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u)
+\begin{DoxyCompactList}\small\item\em ajoute un utilisateur à la collection et à la base de données \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_share_count_a111231f8765db7bcddc26add9247c8e4}{verifier\+Format\+Mail}} (QString m)
 \begin{DoxyCompactList}\small\item\em verifie le format d\textquotesingle{}un mail \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_share_count_a6f587946a4d536f2215408bc6c9a1280}{verifier\+Format\+Telephone}} (QString tel)
+bool \mbox{\hyperlink{class_share_count_af7e389b568f4497ad29635eb5dc3665e}{verifier\+Format\+Telephone}} (QString tel)
 \begin{DoxyCompactList}\small\item\em verifie le format d\textquotesingle{}un numero de telephone \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_share_count_a4f4ce1e8979e8f3647d97735900113c0}{mail\+Est\+Libre}} (QString m)
 \begin{DoxyCompactList}\small\item\em verifie si le mail donné en parametre est deja utilise par un autre utilisateur \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_share_count_acf84cada14c5ad742c9ac5d9e1e1b9fd}\label{class_share_count_acf84cada14c5ad742c9ac5d9e1e1b9fd}} 
+QList$<$ \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$ {\bfseries liste\+Utilisateur}
+\item 
+\mbox{\Hypertarget{class_share_count_a07fbde98969fd78aa7d371c227464cad}\label{class_share_count_a07fbde98969fd78aa7d371c227464cad}} 
+Base\+De\+Donnees {\bfseries base\+De\+Donnees}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -36,21 +47,34 @@ The \mbox{\hyperlink{class_share_count}{Share\+Count}} class.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_share_count_a7b5fc72b29a278c1465fa368cdb5fc02}\label{class_share_count_a7b5fc72b29a278c1465fa368cdb5fc02}} 
+\mbox{\Hypertarget{class_share_count_a31cd8b524fcc5c1a0923fe2210a6d1b3}\label{class_share_count_a31cd8b524fcc5c1a0923fe2210a6d1b3}} 
 \index{ShareCount@{ShareCount}!ajouterUtilisateur@{ajouterUtilisateur}}
 \index{ajouterUtilisateur@{ajouterUtilisateur}!ShareCount@{ShareCount}}
 \doxysubsubsection{\texorpdfstring{ajouterUtilisateur()}{ajouterUtilisateur()}}
-{\footnotesize\ttfamily void Share\+Count\+::ajouter\+Utilisateur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{u }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Share\+Count\+::ajouter\+Utilisateur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{u }\end{DoxyParamCaption})}
 
 
 
-ajoute un utilisateur à la collection 
+ajoute un utilisateur à la collection et à la base de données 
 
 
 \begin{DoxyParams}{Parameters}
 {\em u} & un utilisateur \\
 \hline
 \end{DoxyParams}
+ajoute l\textquotesingle{}utilisateur u à la liste d\textquotesingle{}utilisateur\mbox{\Hypertarget{class_share_count_a18f05362dcb42b6474eb0692e02a1aa9}\label{class_share_count_a18f05362dcb42b6474eb0692e02a1aa9}} 
+\index{ShareCount@{ShareCount}!getListeUtilisateur@{getListeUtilisateur}}
+\index{getListeUtilisateur@{getListeUtilisateur}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{getListeUtilisateur()}{getListeUtilisateur()}}
+{\footnotesize\ttfamily QList$<$ \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$ Share\+Count\+::get\+Liste\+Utilisateur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de la liste des utilisateur 
+
+\begin{DoxyReturn}{Returns}
+la liste des utilisateurs 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_share_count_a4f4ce1e8979e8f3647d97735900113c0}\label{class_share_count_a4f4ce1e8979e8f3647d97735900113c0}} 
 \index{ShareCount@{ShareCount}!mailEstLibre@{mailEstLibre}}
 \index{mailEstLibre@{mailEstLibre}!ShareCount@{ShareCount}}
@@ -66,37 +90,49 @@ verifie si le mail donné en parametre est deja utilise par un autre utilisateur
 {\em m} & un mail \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_share_count_aa2c747501448e6bf2bf2917a42734403}\label{class_share_count_aa2c747501448e6bf2bf2917a42734403}} 
+\mbox{\Hypertarget{class_share_count_a111231f8765db7bcddc26add9247c8e4}\label{class_share_count_a111231f8765db7bcddc26add9247c8e4}} 
 \index{ShareCount@{ShareCount}!verifierFormatMail@{verifierFormatMail}}
 \index{verifierFormatMail@{verifierFormatMail}!ShareCount@{ShareCount}}
 \doxysubsubsection{\texorpdfstring{verifierFormatMail()}{verifierFormatMail()}}
-{\footnotesize\ttfamily void Share\+Count\+::verifier\+Format\+Mail (\begin{DoxyParamCaption}\item[{QString}]{m }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Share\+Count\+::verifier\+Format\+Mail (\begin{DoxyParamCaption}\item[{QString}]{m }\end{DoxyParamCaption})}
 
 
 
 verifie le format d\textquotesingle{}un mail 
+
+verifie le format d\textquotesingle{}un mail le format accepté est \href{mailto:aa@bb.cc}{\texttt{ aa@bb.\+cc}}
 
 
 \begin{DoxyParams}{Parameters}
 {\em m} & un mail \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_share_count_a6f587946a4d536f2215408bc6c9a1280}\label{class_share_count_a6f587946a4d536f2215408bc6c9a1280}} 
+Regex correspondant au format d\textquotesingle{}un mail
+
+le mail a le bon format
+
+le mail n\textquotesingle{}a pas le bon format\mbox{\Hypertarget{class_share_count_af7e389b568f4497ad29635eb5dc3665e}\label{class_share_count_af7e389b568f4497ad29635eb5dc3665e}} 
 \index{ShareCount@{ShareCount}!verifierFormatTelephone@{verifierFormatTelephone}}
 \index{verifierFormatTelephone@{verifierFormatTelephone}!ShareCount@{ShareCount}}
 \doxysubsubsection{\texorpdfstring{verifierFormatTelephone()}{verifierFormatTelephone()}}
-{\footnotesize\ttfamily void Share\+Count\+::verifier\+Format\+Telephone (\begin{DoxyParamCaption}\item[{QString}]{tel }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Share\+Count\+::verifier\+Format\+Telephone (\begin{DoxyParamCaption}\item[{QString}]{tel }\end{DoxyParamCaption})}
 
 
 
 verifie le format d\textquotesingle{}un numero de telephone 
+
+verifie le format d\textquotesingle{}un numero de telephone les formats acceptés sont\+: 0 + 9 chiffres ou +33 + 8 chiffres
 
 
 \begin{DoxyParams}{Parameters}
 {\em tel} & un numero de telephone \\
 \hline
 \end{DoxyParams}
+Regex correspondant au format de téléphone accepté
 
+le numéro a le bon format
+
+le numéro n\textquotesingle{}a pas le bon format
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

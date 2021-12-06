@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gestionnairedialogue_0',['GestionnaireDialogue',['../class_gestionnaire_dialogue.html',1,'']]]
+  ['affbudget_0',['AffBudget',['../class_aff_budget.html',1,'']]]
 ];

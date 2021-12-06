@@ -1,0 +1,38 @@
+\hypertarget{affbudget_8h_source}{}\doxysection{affbudget.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef AFFBUDGET\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define AFFBUDGET\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Utilisateur.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}fenetreprincipale.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Sharecount.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Basededonnees.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_aff_budget}{AffBudget}};}
+\DoxyCodeLine{21 \}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{class_aff_budget}{AffBudget}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     Q\_OBJECT}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_aff_budget_af89f24b2e018b7c434975c0e14ba265a}{AffBudget}}(\mbox{\hyperlink{class_utilisateur}{Utilisateur}} user, \mbox{\hyperlink{class_base_de_donnees}{BaseDeDonnees}} bdd, \mbox{\hyperlink{class_share_count}{ShareCount}} sc, QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_aff_budget}{\string~AffBudget}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} on\_pushButton\_3\_clicked();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keyword}{private}:}
+\DoxyCodeLine{45     Ui::AffBudget *ui;}
+\DoxyCodeLine{46     \mbox{\hyperlink{class_utilisateur}{Utilisateur}} u;}
+\DoxyCodeLine{47     \mbox{\hyperlink{class_base_de_donnees}{BaseDeDonnees}} basedd;}
+\DoxyCodeLine{48     \mbox{\hyperlink{class_share_count}{ShareCount}} shareC;}
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// AFFBUDGET\_H}}
+
+\end{DoxyCode}

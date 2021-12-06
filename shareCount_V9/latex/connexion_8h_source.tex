@@ -1,0 +1,36 @@
+\hypertarget{connexion_8h_source}{}\doxysection{connexion.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}affbudget.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Basededonnees.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Sharecount.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef CONNEXION\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define CONNEXION\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_connexion}{Connexion}};}
+\DoxyCodeLine{12 \}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_connexion}{Connexion}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     Q\_OBJECT}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_connexion}{Connexion}}(BaseDeDonnees bdd, \mbox{\hyperlink{class_share_count}{ShareCount}} s, QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_connexion}{\string~Connexion}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} on\_pushButton\_clicked();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     Ui::Connexion *ui;}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_share_count}{ShareCount}} shareC;}
+\DoxyCodeLine{28     BaseDeDonnees basedd;}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CONNEXION\_H}}
+
+\end{DoxyCode}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShareCount: Utilisateur.h Source File</title>
+<title>My Project: Utilisateur.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ShareCount
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -65,12 +65,13 @@ $(function() {
   <div class="headertitle"><div class="title">Utilisateur.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef UTILISATEUR_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define UTILISATEUR_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QSharedPointer&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#ifndef UTILISATEUR_H</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define UTILISATEUR_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Comptecommun.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Basededonnees.h&quot;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_utilisateur.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_utilisateur.html">Utilisateur</a>{</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">private</span>:</div>
@@ -80,34 +81,50 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    QString mail;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    QString numeroTelephone;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    QString motDePasse;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    QList&lt;CompteCommun&gt; comptesCommuns;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    BaseDeDonnees baseDeDonnees;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_function" href="class_utilisateur.html#adbbbac90e3930b6cb82419a8e7c34a9f">Utilisateur</a>(QString n,QString p,QString m,QString num,QString mdp);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_utilisateur.html#a84a4aa7b7f2fde194e9c706a8eb711e5">   46</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#a84a4aa7b7f2fde194e9c706a8eb711e5">getNom</a>(){<span class="keywordflow">return</span> nom;}</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_utilisateur.html#a6b4d6fa5c9b5c8565c2f2d1f68df9bf3">   52</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#a6b4d6fa5c9b5c8565c2f2d1f68df9bf3">getPrenom</a>(){<span class="keywordflow">return</span> prenom;}</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_utilisateur.html#a5223b968f96419943eb60072c3016dce">   58</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#a5223b968f96419943eb60072c3016dce">getMail</a>(){<span class="keywordflow">return</span> mail;}</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_utilisateur.html#a4420b4083b811252a154f18bc92d9d92">   64</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#a4420b4083b811252a154f18bc92d9d92">getNumeroTelephone</a>(){<span class="keywordflow">return</span> numeroTelephone;}</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_utilisateur.html#aca3871233a273106a85c8489b56e882a">   70</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#aca3871233a273106a85c8489b56e882a">getMotDePasse</a>(){<span class="keywordflow">return</span> motDePasse;}</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_utilisateur.html#a1c92a1f3cceacd23536d646a7f4b8d62">Utilisateur</a>(QString n,QString p,QString m,QString num,QString mdp, BaseDeDonnees bdd);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_utilisateur.html#a84a4aa7b7f2fde194e9c706a8eb711e5">   48</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#a84a4aa7b7f2fde194e9c706a8eb711e5">getNom</a>(){<span class="keywordflow">return</span> nom;}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_utilisateur.html#a6b4d6fa5c9b5c8565c2f2d1f68df9bf3">   54</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#a6b4d6fa5c9b5c8565c2f2d1f68df9bf3">getPrenom</a>(){<span class="keywordflow">return</span> prenom;}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_utilisateur.html#a5223b968f96419943eb60072c3016dce">   60</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#a5223b968f96419943eb60072c3016dce">getMail</a>(){<span class="keywordflow">return</span> mail;}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_utilisateur.html#a4420b4083b811252a154f18bc92d9d92">   66</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#a4420b4083b811252a154f18bc92d9d92">getNumeroTelephone</a>(){<span class="keywordflow">return</span> numeroTelephone;}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_utilisateur.html#aca3871233a273106a85c8489b56e882a">   72</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#aca3871233a273106a85c8489b56e882a">getMotDePasse</a>(){<span class="keywordflow">return</span> motDePasse;}</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">// UTILISATEUR_H</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_utilisateur.html#ae912908aba8054c939fdfe21875b8141">ajouterIBAN</a>(QString ib);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_utilisateur.html#a6c05bc611edcaeb051adb9c4b66686a9">   85</a></span>    QString <a class="code hl_function" href="class_utilisateur.html#a6c05bc611edcaeb051adb9c4b66686a9">getIBAN</a>(){<span class="keywordflow">return</span> iban;}</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_utilisateur.html#a5056d8e9c7dd59c09ba5da74b7dc8e83">ajouterContributeur</a>(<a class="code hl_class" href="class_utilisateur.html">Utilisateur</a>&amp; u,<a class="code hl_class" href="class_compte_commun.html">CompteCommun</a>&amp; c);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_utilisateur.html#ac87a2fa219ac3ab3e0343644d173d40b">freeListeComptesCommuns</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_utilisateur.html#ace32dfb033d21a453c975621ddb0dc23">creerCompteCommun</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#endif </span><span class="comment">// UTILISATEUR_H</span></div>
+<div class="ttc" id="aclass_compte_commun_html"><div class="ttname"><a href="class_compte_commun.html">CompteCommun</a></div><div class="ttdoc">le classe qui représente un compte commun</div><div class="ttdef"><b>Definition:</b> Comptecommun.h:15</div></div>
 <div class="ttc" id="aclass_utilisateur_html"><div class="ttname"><a href="class_utilisateur.html">Utilisateur</a></div><div class="ttdoc">La classe représentant un utilisateur de l'application.</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:19</div></div>
-<div class="ttc" id="aclass_utilisateur_html_a4420b4083b811252a154f18bc92d9d92"><div class="ttname"><a href="class_utilisateur.html#a4420b4083b811252a154f18bc92d9d92">Utilisateur::getNumeroTelephone</a></div><div class="ttdeci">QString getNumeroTelephone()</div><div class="ttdoc">getNumeroTelephone, retourne le numero de telephone de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:64</div></div>
-<div class="ttc" id="aclass_utilisateur_html_a5223b968f96419943eb60072c3016dce"><div class="ttname"><a href="class_utilisateur.html#a5223b968f96419943eb60072c3016dce">Utilisateur::getMail</a></div><div class="ttdeci">QString getMail()</div><div class="ttdoc">getMail, retourne le mail de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:58</div></div>
-<div class="ttc" id="aclass_utilisateur_html_a6b4d6fa5c9b5c8565c2f2d1f68df9bf3"><div class="ttname"><a href="class_utilisateur.html#a6b4d6fa5c9b5c8565c2f2d1f68df9bf3">Utilisateur::getPrenom</a></div><div class="ttdeci">QString getPrenom()</div><div class="ttdoc">getPrenom, retourne le prenom de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:52</div></div>
-<div class="ttc" id="aclass_utilisateur_html_a84a4aa7b7f2fde194e9c706a8eb711e5"><div class="ttname"><a href="class_utilisateur.html#a84a4aa7b7f2fde194e9c706a8eb711e5">Utilisateur::getNom</a></div><div class="ttdeci">QString getNom()</div><div class="ttdoc">getNom, retourne le nom de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:46</div></div>
-<div class="ttc" id="aclass_utilisateur_html_aca3871233a273106a85c8489b56e882a"><div class="ttname"><a href="class_utilisateur.html#aca3871233a273106a85c8489b56e882a">Utilisateur::getMotDePasse</a></div><div class="ttdeci">QString getMotDePasse()</div><div class="ttdoc">getMotDePasse, retourne le mot de passe de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:70</div></div>
-<div class="ttc" id="aclass_utilisateur_html_adbbbac90e3930b6cb82419a8e7c34a9f"><div class="ttname"><a href="class_utilisateur.html#adbbbac90e3930b6cb82419a8e7c34a9f">Utilisateur::Utilisateur</a></div><div class="ttdeci">Utilisateur(QString n, QString p, QString m, QString num, QString mdp)</div><div class="ttdoc">Constructeur de la classe Utilisateur.</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:11</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a1c92a1f3cceacd23536d646a7f4b8d62"><div class="ttname"><a href="class_utilisateur.html#a1c92a1f3cceacd23536d646a7f4b8d62">Utilisateur::Utilisateur</a></div><div class="ttdeci">Utilisateur(QString n, QString p, QString m, QString num, QString mdp, BaseDeDonnees bdd)</div><div class="ttdoc">Constructeur de la classe Utilisateur.</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:13</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a4420b4083b811252a154f18bc92d9d92"><div class="ttname"><a href="class_utilisateur.html#a4420b4083b811252a154f18bc92d9d92">Utilisateur::getNumeroTelephone</a></div><div class="ttdeci">QString getNumeroTelephone()</div><div class="ttdoc">getNumeroTelephone, retourne le numero de telephone de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:66</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a5056d8e9c7dd59c09ba5da74b7dc8e83"><div class="ttname"><a href="class_utilisateur.html#a5056d8e9c7dd59c09ba5da74b7dc8e83">Utilisateur::ajouterContributeur</a></div><div class="ttdeci">void ajouterContributeur(Utilisateur &amp;u, CompteCommun &amp;c)</div><div class="ttdoc">ajouterContributeur,</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:35</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a5223b968f96419943eb60072c3016dce"><div class="ttname"><a href="class_utilisateur.html#a5223b968f96419943eb60072c3016dce">Utilisateur::getMail</a></div><div class="ttdeci">QString getMail()</div><div class="ttdoc">getMail, retourne le mail de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:60</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a6b4d6fa5c9b5c8565c2f2d1f68df9bf3"><div class="ttname"><a href="class_utilisateur.html#a6b4d6fa5c9b5c8565c2f2d1f68df9bf3">Utilisateur::getPrenom</a></div><div class="ttdeci">QString getPrenom()</div><div class="ttdoc">getPrenom, retourne le prenom de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:54</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a6c05bc611edcaeb051adb9c4b66686a9"><div class="ttname"><a href="class_utilisateur.html#a6c05bc611edcaeb051adb9c4b66686a9">Utilisateur::getIBAN</a></div><div class="ttdeci">QString getIBAN()</div><div class="ttdoc">getIBAN, retourne l'iban de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:85</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a84a4aa7b7f2fde194e9c706a8eb711e5"><div class="ttname"><a href="class_utilisateur.html#a84a4aa7b7f2fde194e9c706a8eb711e5">Utilisateur::getNom</a></div><div class="ttdeci">QString getNom()</div><div class="ttdoc">getNom, retourne le nom de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:48</div></div>
+<div class="ttc" id="aclass_utilisateur_html_ac87a2fa219ac3ab3e0343644d173d40b"><div class="ttname"><a href="class_utilisateur.html#ac87a2fa219ac3ab3e0343644d173d40b">Utilisateur::freeListeComptesCommuns</a></div><div class="ttdeci">void freeListeComptesCommuns()</div><div class="ttdoc">freeListeComptesCommuns, la fonction qui libère l'espace mémoire utilisée par la liste de comptes com...</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:43</div></div>
+<div class="ttc" id="aclass_utilisateur_html_aca3871233a273106a85c8489b56e882a"><div class="ttname"><a href="class_utilisateur.html#aca3871233a273106a85c8489b56e882a">Utilisateur::getMotDePasse</a></div><div class="ttdeci">QString getMotDePasse()</div><div class="ttdoc">getMotDePasse, retourne le mot de passe de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:72</div></div>
+<div class="ttc" id="aclass_utilisateur_html_ace32dfb033d21a453c975621ddb0dc23"><div class="ttname"><a href="class_utilisateur.html#ace32dfb033d21a453c975621ddb0dc23">Utilisateur::creerCompteCommun</a></div><div class="ttdeci">void creerCompteCommun()</div><div class="ttdoc">creerCompteCommun, la fonction qui permet à l'utilisateur de créer un compte commun</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:52</div></div>
+<div class="ttc" id="aclass_utilisateur_html_ae912908aba8054c939fdfe21875b8141"><div class="ttname"><a href="class_utilisateur.html#ae912908aba8054c939fdfe21875b8141">Utilisateur::ajouterIBAN</a></div><div class="ttdeci">void ajouterIBAN(QString ib)</div><div class="ttdoc">ajouterIBAN ajoute l'iban de l'utilisateur</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

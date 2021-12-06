@@ -1,0 +1,40 @@
+\hypertarget{_basededonnees_8h_source}{}\doxysection{Basededonnees.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include"{}Utilisateur.h"{}}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef BASEDEDONNEES\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define BASEDEDONNEES\_H}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QSqlDatabase>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QSqlQuery>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_base_de_donnees}{BaseDeDonnees}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_base_de_donnees_ac4d0c514f439b3a19dc35c159955373a}{BaseDeDonnees}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_base_de_donnees_ac8566693e1d6a945c9263da7a150fc2c}{creerBDD}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_de_donnees_a81cb12fce2b8bead667ca2f3cc369ea7}{ajouterDonnees}}(\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_de_donnees_a89da3a1457d2c85edfa95d8eac6a8daf}{ajouterCoordonneesBancaires}}(\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{53     \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \mbox{\hyperlink{class_base_de_donnees_a3e126c7d5a70ac493c2e99869eae0b89}{trouverUtilisateur}}(QString mail, QString mdp);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{62     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_de_donnees_a26fc63b27f0eb91c980a7e84b4a7fb1d}{connexionReussie}}(QString mail, QString mdp);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_de_donnees_ac3d683c30783188777ea44bc345482fe}{creerTableCompteCommun}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_de_donnees_a6bd2a0cb1fedb4533d0622edc62c523e}{ajouterCompteCommun}}(\mbox{\hyperlink{class_utilisateur}{Utilisateur}} u);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_de_donnees_a026a60677be8828b525f8039214fc0ff}{ajouterContributeur}}(\mbox{\hyperlink{class_compte_commun}{CompteCommun}} c, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} u);}
+\DoxyCodeLine{80 \};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BASEDEDONNEES\_H}}
+
+\end{DoxyCode}

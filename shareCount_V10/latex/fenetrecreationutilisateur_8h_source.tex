@@ -1,0 +1,38 @@
+\hypertarget{fenetrecreationutilisateur_8h_source}{}\doxysection{fenetrecreationutilisateur.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FENETRECREATIONUTILISATEUR\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FENETRECREATIONUTILISATEUR\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QPushButton>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}affbudget.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QLabel>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Basededonnees.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Utilisateur.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Sharecount.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_fenetre_creation_utilisateur}{FenetreCreationUtilisateur}};}
+\DoxyCodeLine{14 \}}
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_fenetre_creation_utilisateur}{FenetreCreationUtilisateur}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     Q\_OBJECT}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{33     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_fenetre_creation_utilisateur_aeede034e22ba0411d042e57ce875fe5a}{FenetreCreationUtilisateur}}(\mbox{\hyperlink{class_base_de_donnees}{BaseDeDonnees}} bdd, \mbox{\hyperlink{class_share_count}{ShareCount}} sc, QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_fenetre_creation_utilisateur}{\string~FenetreCreationUtilisateur}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} on\_pushButton\_clicked();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{private}:}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_base_de_donnees}{BaseDeDonnees}} basedd;}
+\DoxyCodeLine{44     \mbox{\hyperlink{class_share_count}{ShareCount}} Sharec;}
+\DoxyCodeLine{45     Ui::FenetreCreationUtilisateur *ui;}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FENETRECREATIONUTILISATEUR\_H}}
+
+\end{DoxyCode}
