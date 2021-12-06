@@ -1,4 +1,6 @@
 #include "Basededonnees.h"
+#include "QSqlError"
+
 /**
  * @brief Constructeur de la classe BaseDeDonnees
 */
@@ -45,7 +47,8 @@ void BaseDeDonnees::ajouterDonnees(Utilisateur u){
     if(query.exec(requete)){
         std::cout << "utilisateur bien ajouté" << std::endl;
     }else{ ///l'execution de la requête à échouée
-        std::cout << "erreur dans l'ajout de l'utilisateur"s << std::endl;
+        string s = query.lastError().text().toStdString();
+        std::cout << "erreur dans l'ajout de l'utilisateur : " << s << std::endl;
     }
 }
 /**
@@ -60,7 +63,8 @@ void BaseDeDonnees::ajouterCoordonneesBancaires(Utilisateur u){
     if(query.exec(requete)){
         std::cout << "coordonnées bancaires bien ajoutées" << std::endl;
     }else{ ///l'execution de la requête à échouée
-        std::cout << "erreur dans l'ajout des coordonnées bancaires" << std::endl;
+        string s = query.lastError().text().toStdString();
+        std::cout << "erreur dans l'ajout des coordonnées bancaires : " << s << std::endl;
     }
 }
 
@@ -81,7 +85,8 @@ bool BaseDeDonnees::connexionReussie(QString mail, QString mdp){
         resultat_sql=true;
         std::cout << "la requête de connexion a marché " << std::endl;
     }else{ ///l'execution de la requête à échouée
-        std::cout << "la requête de connexion a échoué" << std::endl;
+        string s = query.lastError().text().toStdString();
+        std::cout << "la requête de connexion a échoué" << s << std::endl;
     }
     return resultat_sql;
 }
@@ -97,7 +102,8 @@ void BaseDeDonnees::creerTableCompteCommun(){
     if(query.exec(requete)){
         std::cout << "la requête d'ajout de la table CompteCommun a réussi " << std::endl;
     }else{ ///l'execution de la requête à échouée
-        std::cout << "la requête d'ajout de la table CompteCommun a échoué" << std::endl;
+        string s = query.lastError().text().toStdString();
+        std::cout << "la requête d'ajout de la table CompteCommun a échoué" << s << std::endl;
     }
 }
 
@@ -113,7 +119,8 @@ void BaseDeDonnees::ajouterCompteCommun(Utilisateur u){
     if(query.exec(requete)){
         std::cout << "la requête de modification de la table CompteCommun a réussi " << std::endl;
     }else{ ///l'execution de la requête à échouée
-        std::cout << "la requête de modification de la table CompteCommun a échoué" << std::endl;
+        string s = query.lastError().text().toStdString();
+        std::cout << "la requête de modification de la table CompteCommun a échoué" << s << std::endl;
     }
 }
 
