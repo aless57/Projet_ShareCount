@@ -156,10 +156,10 @@ compiler_moc_header_make_all: debug/moc_affbudget.cpp debug/moc_connexion.cpp de
 compiler_moc_header_clean:
 	-$(DEL_FILE) debug\moc_affbudget.cpp debug\moc_connexion.cpp debug\moc_fenetrecreationutilisateur.cpp debug\moc_fenetreprincipale.cpp
 debug/moc_affbudget.cpp: ../shareCount_V9/affbudget.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtguiglobal.h \
+		../shareCount_V9/Utilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qstring.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qchar.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qglobal.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qconfig.h \
@@ -180,21 +180,11 @@ debug/moc_affbudget.cpp: ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qglobalstatic.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnumeric.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qversiontagging.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtgui-config.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qwidget.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qwindowdefs.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qobjectdefs.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qnamespace.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qtmetamacros.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qobjectdefs_impl.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qwindowdefs_win.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qobject.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qstring.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qchar.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringview.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qbytearray.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qrefcount.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qnamespace.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qtmetamacros.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qarraydata.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qpair.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qarraydatapointer.h \
@@ -208,8 +198,15 @@ debug/moc_affbudget.cpp: ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qutf8stringview.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringtokenizer.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringbuilder.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qlist.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qsharedpointer.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qshareddata.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qhashfunctions.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qsharedpointer_impl.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qobject.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qobjectdefs.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qobjectdefs_impl.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qlist.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qiterator.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qbytearraylist.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringlist.h \
@@ -230,39 +227,17 @@ debug/moc_affbudget.cpp: ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qmath.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qobject_impl.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qproperty.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qshareddata.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qbindingstorage.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qpropertyprivate.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qmargins.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpaintdevice.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qrect.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qsize.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qpoint.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpalette.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qcolor.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qrgb.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qrgba64.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qbrush.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qimage.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpixelformat.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtransform.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpolygon.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qregion.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qline.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpixmap.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qsharedpointer.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qsharedpointer_impl.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qfont.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qfontmetrics.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qfontinfo.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qsizepolicy.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qcursor.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qbitmap.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qkeysequence.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qevent.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qiodevice.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qpointer.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qurl.h \
+		../shareCount_V9/Comptecommun.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QList \
+		../shareCount_V9/Basededonnees.h \
+		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlDatabase \
+		../../../QT/6.2.2/mingw_64/include/QtSql/qsqldatabase.h \
+		../../../QT/6.2.2/mingw_64/include/QtSql/qtsqlglobal.h \
+		../../../QT/6.2.2/mingw_64/include/QtSql/qtsql-config.h \
+		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlQuery \
+		../../../QT/6.2.2/mingw_64/include/QtSql/qsqlquery.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qvariant.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qmap.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qshareddata_impl.h \
@@ -272,13 +247,53 @@ debug/moc_affbudget.cpp: ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringconverter.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qset.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qcontiguouscache.h \
+		../shareCount_V9/fenetreprincipale.h \
+		../shareCount_V9/fenetrecreationutilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QPushButton \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtguiglobal.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtgui-config.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qicon.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qsize.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qmargins.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpixmap.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpaintdevice.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qwindowdefs.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qrect.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qpoint.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qcolor.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qrgb.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qrgba64.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qimage.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpixelformat.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtransform.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpolygon.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qregion.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qline.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qkeysequence.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qwidget.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpalette.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qbrush.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qfont.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qfontmetrics.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qfontinfo.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qsizepolicy.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qcursor.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qbitmap.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qevent.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qiodevice.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qpointer.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qurl.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qeventpoint.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qvector2d.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qvectornd.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qpointingdevice.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qinputdevice.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qscreen.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QList \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QObject \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QRect \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QSize \
@@ -286,6 +301,18 @@ debug/moc_affbudget.cpp: ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/QTransform \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
+		../shareCount_V9/affbudget.h \
+		../shareCount_V9/Sharecount.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QRegularExpression \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qregularexpression.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
+		../shareCount_V9/connexion.h \
 		debug/moc_predefs.h \
 		../../../QT/6.2.2/mingw_64/bin/moc.exe
 	G:\QT\6.2.2\mingw_64\bin\moc.exe $(DEFINES) --include G:/ShareCount/Projet_ShareCount/build-shareCount-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/debug/moc_predefs.h -IG:/QT/6.2.2/mingw_64/mkspecs/win32-g++ -IG:/ShareCount/Projet_ShareCount/shareCount_V9 -IG:/QT/6.2.2/mingw_64/include -IG:/QT/6.2.2/mingw_64/include/QtWidgets -IG:/QT/6.2.2/mingw_64/include/QtGui -IG:/QT/6.2.2/mingw_64/include/QtSql -IG:/QT/6.2.2/mingw_64/include/QtCore -I. -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IG:/QT/Tools/mingw900_64/x86_64-w64-mingw32/include ..\shareCount_V9\affbudget.h -o debug\moc_affbudget.cpp
@@ -422,6 +449,10 @@ debug/moc_connexion.cpp: ../shareCount_V9/connexion.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
 		../shareCount_V9/affbudget.h \
+		../shareCount_V9/Utilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
+		../shareCount_V9/Comptecommun.h \
 		../shareCount_V9/Basededonnees.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlDatabase \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqldatabase.h \
@@ -429,13 +460,21 @@ debug/moc_connexion.cpp: ../shareCount_V9/connexion.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qtsql-config.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlQuery \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqlquery.h \
-		../shareCount_V9/Utilisateur.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
-		../shareCount_V9/Comptecommun.h \
+		../shareCount_V9/fenetreprincipale.h \
+		../shareCount_V9/fenetrecreationutilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QPushButton \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qicon.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
 		../shareCount_V9/Sharecount.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QRegularExpression \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qregularexpression.h \
+		../shareCount_V9/connexion.h \
 		debug/moc_predefs.h \
 		../../../QT/6.2.2/mingw_64/bin/moc.exe
 	G:\QT\6.2.2\mingw_64\bin\moc.exe $(DEFINES) --include G:/ShareCount/Projet_ShareCount/build-shareCount-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/debug/moc_predefs.h -IG:/QT/6.2.2/mingw_64/mkspecs/win32-g++ -IG:/ShareCount/Projet_ShareCount/shareCount_V9 -IG:/QT/6.2.2/mingw_64/include -IG:/QT/6.2.2/mingw_64/include/QtWidgets -IG:/QT/6.2.2/mingw_64/include/QtGui -IG:/QT/6.2.2/mingw_64/include/QtSql -IG:/QT/6.2.2/mingw_64/include/QtCore -I. -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IG:/QT/Tools/mingw900_64/x86_64-w64-mingw32/include ..\shareCount_V9\connexion.h -o debug\moc_connexion.cpp
@@ -574,13 +613,10 @@ debug/moc_fenetrecreationutilisateur.cpp: ../shareCount_V9/fenetrecreationutilis
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
 		../shareCount_V9/affbudget.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
+		../shareCount_V9/Utilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
+		../shareCount_V9/Comptecommun.h \
 		../shareCount_V9/Basededonnees.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlDatabase \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqldatabase.h \
@@ -588,13 +624,19 @@ debug/moc_fenetrecreationutilisateur.cpp: ../shareCount_V9/fenetrecreationutilis
 		../../../QT/6.2.2/mingw_64/include/QtSql/qtsql-config.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlQuery \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqlquery.h \
-		../shareCount_V9/Utilisateur.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
-		../shareCount_V9/Comptecommun.h \
+		../shareCount_V9/fenetreprincipale.h \
+		../shareCount_V9/fenetrecreationutilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
 		../shareCount_V9/Sharecount.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QRegularExpression \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qregularexpression.h \
+		../shareCount_V9/connexion.h \
 		debug/moc_predefs.h \
 		../../../QT/6.2.2/mingw_64/bin/moc.exe
 	G:\QT\6.2.2\mingw_64\bin\moc.exe $(DEFINES) --include G:/ShareCount/Projet_ShareCount/build-shareCount-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/debug/moc_predefs.h -IG:/QT/6.2.2/mingw_64/mkspecs/win32-g++ -IG:/ShareCount/Projet_ShareCount/shareCount_V9 -IG:/QT/6.2.2/mingw_64/include -IG:/QT/6.2.2/mingw_64/include/QtWidgets -IG:/QT/6.2.2/mingw_64/include/QtGui -IG:/QT/6.2.2/mingw_64/include/QtSql -IG:/QT/6.2.2/mingw_64/include/QtCore -I. -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IG:/QT/Tools/mingw900_64/x86_64-w64-mingw32/include ..\shareCount_V9\fenetrecreationutilisateur.h -o debug\moc_fenetrecreationutilisateur.cpp
@@ -734,13 +776,10 @@ debug/moc_fenetreprincipale.cpp: ../shareCount_V9/fenetreprincipale.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
 		../shareCount_V9/affbudget.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
+		../shareCount_V9/Utilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
+		../shareCount_V9/Comptecommun.h \
 		../shareCount_V9/Basededonnees.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlDatabase \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqldatabase.h \
@@ -748,14 +787,18 @@ debug/moc_fenetreprincipale.cpp: ../shareCount_V9/fenetreprincipale.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qtsql-config.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlQuery \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqlquery.h \
-		../shareCount_V9/Utilisateur.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
-		../shareCount_V9/Comptecommun.h \
+		../shareCount_V9/fenetreprincipale.h \
+		../shareCount_V9/connexion.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
 		../shareCount_V9/Sharecount.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QRegularExpression \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qregularexpression.h \
-		../shareCount_V9/connexion.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
 		debug/moc_predefs.h \
 		../../../QT/6.2.2/mingw_64/bin/moc.exe
 	G:\QT\6.2.2\mingw_64\bin\moc.exe $(DEFINES) --include G:/ShareCount/Projet_ShareCount/build-shareCount-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/debug/moc_predefs.h -IG:/QT/6.2.2/mingw_64/mkspecs/win32-g++ -IG:/ShareCount/Projet_ShareCount/shareCount_V9 -IG:/QT/6.2.2/mingw_64/include -IG:/QT/6.2.2/mingw_64/include/QtWidgets -IG:/QT/6.2.2/mingw_64/include/QtGui -IG:/QT/6.2.2/mingw_64/include/QtSql -IG:/QT/6.2.2/mingw_64/include/QtCore -I. -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IG:/QT/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IG:/QT/Tools/mingw900_64/x86_64-w64-mingw32/include ..\shareCount_V9\fenetreprincipale.h -o debug\moc_fenetreprincipale.cpp
@@ -796,10 +839,10 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 ####### Compile
 
 debug/affbudget.o: ../shareCount_V9/affbudget.cpp ../shareCount_V9/affbudget.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtguiglobal.h \
+		../shareCount_V9/Utilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qstring.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qchar.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qglobal.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qconfig.h \
@@ -820,21 +863,11 @@ debug/affbudget.o: ../shareCount_V9/affbudget.cpp ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qglobalstatic.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnumeric.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qversiontagging.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtgui-config.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qwidget.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qwindowdefs.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qobjectdefs.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qnamespace.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qtmetamacros.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qobjectdefs_impl.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qwindowdefs_win.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qobject.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qstring.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qchar.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringview.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qbytearray.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qrefcount.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qnamespace.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qtmetamacros.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qarraydata.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qpair.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qarraydatapointer.h \
@@ -848,8 +881,15 @@ debug/affbudget.o: ../shareCount_V9/affbudget.cpp ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qutf8stringview.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringtokenizer.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringbuilder.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qlist.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qsharedpointer.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qshareddata.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qhashfunctions.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qsharedpointer_impl.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qobject.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qobjectdefs.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qobjectdefs_impl.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qlist.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qiterator.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qbytearraylist.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringlist.h \
@@ -870,39 +910,17 @@ debug/affbudget.o: ../shareCount_V9/affbudget.cpp ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qmath.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qobject_impl.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qproperty.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qshareddata.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qbindingstorage.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qpropertyprivate.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qmargins.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpaintdevice.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qrect.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qsize.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qpoint.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpalette.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qcolor.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qrgb.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qrgba64.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qbrush.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qimage.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpixelformat.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtransform.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpolygon.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qregion.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qline.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpixmap.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qsharedpointer.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qsharedpointer_impl.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qfont.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qfontmetrics.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qfontinfo.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qsizepolicy.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qcursor.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qbitmap.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qkeysequence.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qevent.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qiodevice.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qpointer.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/qurl.h \
+		../shareCount_V9/Comptecommun.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QList \
+		../shareCount_V9/Basededonnees.h \
+		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlDatabase \
+		../../../QT/6.2.2/mingw_64/include/QtSql/qsqldatabase.h \
+		../../../QT/6.2.2/mingw_64/include/QtSql/qtsqlglobal.h \
+		../../../QT/6.2.2/mingw_64/include/QtSql/qtsql-config.h \
+		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlQuery \
+		../../../QT/6.2.2/mingw_64/include/QtSql/qsqlquery.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qvariant.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qmap.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qshareddata_impl.h \
@@ -912,13 +930,53 @@ debug/affbudget.o: ../shareCount_V9/affbudget.cpp ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qstringconverter.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qset.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qcontiguouscache.h \
+		../shareCount_V9/fenetreprincipale.h \
+		../shareCount_V9/fenetrecreationutilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QPushButton \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtguiglobal.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtgui-config.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qicon.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qsize.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qmargins.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpixmap.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpaintdevice.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qwindowdefs.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qrect.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qpoint.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qcolor.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qrgb.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qrgba64.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qimage.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpixelformat.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtransform.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpolygon.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qregion.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qline.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qkeysequence.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qwidget.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpalette.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qbrush.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qfont.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qfontmetrics.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qfontinfo.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qsizepolicy.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qcursor.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qbitmap.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qevent.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qiodevice.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qpointer.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qurl.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qeventpoint.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qvector2d.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qvectornd.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qpointingdevice.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qinputdevice.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qscreen.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QList \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QObject \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QRect \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QSize \
@@ -926,6 +984,17 @@ debug/affbudget.o: ../shareCount_V9/affbudget.cpp ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/QTransform \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
+		../shareCount_V9/Sharecount.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QRegularExpression \
+		../../../QT/6.2.2/mingw_64/include/QtCore/qregularexpression.h \
+		../shareCount_V9/connexion.h \
 		ui_affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QVariant \
 		../../../QT/6.2.2/mingw_64/include/QtWidgets/QApplication \
@@ -948,17 +1017,8 @@ debug/affbudget.o: ../shareCount_V9/affbudget.cpp ../shareCount_V9/affbudget.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qinputmethod.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qlocale.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qguiapplication_platform.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
 		../../../QT/6.2.2/mingw_64/include/QtWidgets/QProgressBar \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qprogressbar.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QPushButton \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qpushbutton.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qabstractbutton.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qicon.h
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qprogressbar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\affbudget.o ..\shareCount_V9\affbudget.cpp
 
 debug/connexion.o: ../shareCount_V9/connexion.cpp ../shareCount_V9/connexion.h \
@@ -1093,6 +1153,10 @@ debug/connexion.o: ../shareCount_V9/connexion.cpp ../shareCount_V9/connexion.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
 		../shareCount_V9/affbudget.h \
+		../shareCount_V9/Utilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
+		../shareCount_V9/Comptecommun.h \
 		../shareCount_V9/Basededonnees.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlDatabase \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqldatabase.h \
@@ -1100,10 +1164,17 @@ debug/connexion.o: ../shareCount_V9/connexion.cpp ../shareCount_V9/connexion.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qtsql-config.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlQuery \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqlquery.h \
-		../shareCount_V9/Utilisateur.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
-		../shareCount_V9/Comptecommun.h \
+		../shareCount_V9/fenetreprincipale.h \
+		../shareCount_V9/fenetrecreationutilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QPushButton \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qicon.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
 		../shareCount_V9/Sharecount.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QRegularExpression \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qregularexpression.h \
@@ -1129,21 +1200,12 @@ debug/connexion.o: ../shareCount_V9/connexion.cpp ../shareCount_V9/connexion.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qinputmethod.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qlocale.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qguiapplication_platform.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
 		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLineEdit \
 		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlineedit.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qtextcursor.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qtextformat.h \
 		../../../QT/6.2.2/mingw_64/include/QtGui/qpen.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtextoption.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QPushButton \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qpushbutton.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qabstractbutton.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qicon.h
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtextoption.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\connexion.o ..\shareCount_V9\connexion.cpp
 
 debug/fenetrecreationutilisateur.o: ../shareCount_V9/fenetrecreationutilisateur.cpp ../shareCount_V9/fenetrecreationutilisateur.h \
@@ -1280,13 +1342,10 @@ debug/fenetrecreationutilisateur.o: ../shareCount_V9/fenetrecreationutilisateur.
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
 		../shareCount_V9/affbudget.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
+		../shareCount_V9/Utilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
+		../shareCount_V9/Comptecommun.h \
 		../shareCount_V9/Basededonnees.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlDatabase \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqldatabase.h \
@@ -1294,13 +1353,18 @@ debug/fenetrecreationutilisateur.o: ../shareCount_V9/fenetrecreationutilisateur.
 		../../../QT/6.2.2/mingw_64/include/QtSql/qtsql-config.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlQuery \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqlquery.h \
-		../shareCount_V9/Utilisateur.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
-		../shareCount_V9/Comptecommun.h \
+		../shareCount_V9/fenetreprincipale.h \
+		../shareCount_V9/connexion.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
 		../shareCount_V9/Sharecount.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QRegularExpression \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qregularexpression.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
 		ui_fenetrecreationutilisateur.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QVariant \
 		../../../QT/6.2.2/mingw_64/include/QtWidgets/QApplication \
@@ -1466,13 +1530,10 @@ debug/fenetreprincipale.o: ../shareCount_V9/fenetreprincipale.cpp ../shareCount_
 		../../../QT/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
 		../shareCount_V9/affbudget.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
-		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
-		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
+		../shareCount_V9/Utilisateur.h \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
+		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
+		../shareCount_V9/Comptecommun.h \
 		../shareCount_V9/Basededonnees.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlDatabase \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqldatabase.h \
@@ -1480,13 +1541,16 @@ debug/fenetreprincipale.o: ../shareCount_V9/fenetreprincipale.cpp ../shareCount_
 		../../../QT/6.2.2/mingw_64/include/QtSql/qtsql-config.h \
 		../../../QT/6.2.2/mingw_64/include/QtSql/QSqlQuery \
 		../../../QT/6.2.2/mingw_64/include/QtSql/qsqlquery.h \
-		../shareCount_V9/Utilisateur.h \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QString \
-		../../../QT/6.2.2/mingw_64/include/QtCore/QSharedPointer \
-		../shareCount_V9/Comptecommun.h \
 		../shareCount_V9/Sharecount.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QRegularExpression \
 		../../../QT/6.2.2/mingw_64/include/QtCore/qregularexpression.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QDialog \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/QLabel \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../QT/6.2.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qpicture.h \
+		../../../QT/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
 		../shareCount_V9/connexion.h \
 		ui_fenetreprincipale.h \
 		../../../QT/6.2.2/mingw_64/include/QtCore/QVariant \

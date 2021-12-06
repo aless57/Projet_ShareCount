@@ -35,27 +35,5 @@ int main(int argc, char *argv[])
     mainW->show();
     return app.exec();
 
-/*
-    ShareCount sc(bdd);
-    Utilisateur u("n","p","m","num","mdp", bdd);
-    Utilisateur u1("n1","p1","m1","num1","mdp1", bdd);
-    u.ajouterIBAN("123");
-    sc.ajouterUtilisateur(u);
-    sc.ajouterUtilisateur(u1);
-    bdd.ajouterCoordonneesBancaires(u);
-
-    sc.ajouterUtilisateur(u1);
-    int n;
-    n=sc.getListeUtilisateur().size();
-    cout << n << endl;
-    sc.verifierFormatMail(QString("r"));
-    sc.verifierFormatTelephone(QString("0777777777"));
-    sc.mailEstLibre(QString("m"));
-
-    u.creerCompteCommun();*/
-
-
-
-
 }
 
